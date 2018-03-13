@@ -303,10 +303,10 @@ section {
   section .left img#refresh2 {
     width: 200px; }
   section .left video {
-    height: 130px;
+    height: 105px;
     position: absolute;
-    top: 60px;
-    left: 96px;
+    top: 45px;
+    left: 120px;
     z-index: -1; }
   section .music {
     /* Safari */
@@ -343,30 +343,59 @@ section {
     font-size: 11px;
     margin: 0 auto;
     text-align: left; }
+  section#about {
+    margin-top: 60px; }
   section#service {
     display: block; }
-    section#service .service-title {
-      text-align: center;
-      margin-bottom: 80px;
-      font-size: 36px; }
-      section#service .service-title::before {
-        content: '';
-        display: inline-block;
-        width: 350px;
-        height: 5px;
-        border-top: solid 1px;
-        border-bottom: solid 1px;
-        margin-right: 20px;
-        margin-bottom: 3px; }
-      section#service .service-title::after {
-        content: '';
-        display: inline-block;
-        width: 350px;
-        height: 5px;
-        border-top: solid 1px;
-        border-bottom: solid 1px;
-        margin-left: 20px;
-        margin-bottom: 3px; }
+  section .service-title {
+    text-align: center;
+    margin-bottom: 80px;
+    font-size: 36px; }
+  section#news {
+    display: block; }
+
+.instagram {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none; }
+  .instagram .item {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    position: relative; }
+    .instagram .item:hover {
+      opacity: 0.7; }
+    .instagram .item:before {
+      content: '';
+      width: 200px;
+      height: 200px;
+      background-repeat: no-repeat;
+      position: absolute;
+      z-index: 10; }
+    .instagram .item:nth-of-type(1):before {
+      background-image: url(/assets/img/top/ai.svg); }
+    .instagram .item:nth-of-type(2):before {
+      background-image: url(/assets/img/top/camera.svg); }
+    .instagram .item:nth-of-type(3):before {
+      background-image: url(/assets/img/top/hanger.svg); }
+    .instagram .item:nth-of-type(4):before {
+      background-image: url(/assets/img/top/ps.svg); }
+    .instagram .item:nth-of-type(5):before {
+      background-image: url(/assets/img/top/kanpai.svg); }
+    .instagram .item:nth-of-type(6):before {
+      background-image: url(/assets/img/top/record.svg); }
+    .instagram .item:nth-of-type(7):before {
+      background-image: url(/assets/img/top/pr.svg); }
+    .instagram .item:nth-of-type(8):before {
+      background-image: url(/assets/img/top/hukidasi.svg); }
+    .instagram .item:nth-of-type(9):before {
+      background-image: url(/assets/img/top/nail.svg); }
 
 .container {
   display: -webkit-box;
@@ -436,7 +465,8 @@ footer dl {
 section#works {
   background-image: url("../img/bg_work.jpg");
   background-size: cover;
-  height: 720px; }
+  height: 720px;
+  margin: 0 0 30px; }
 
 .client-logo img {
   width: 70px;
@@ -1704,6 +1734,8 @@ html.modal-active, body.modal-active {
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%); }
+  img {
+    width: 100%; }
   .menu-btn {
     position: fixed;
     top: 16px;
@@ -1778,6 +1810,8 @@ html.modal-active, body.modal-active {
     color: #ffffff; }
   .wrapper {
     overflow: hidden; }
+  .member img {
+    width: 80%; }
   section {
     display: block;
     margin-bottom: 60px;
@@ -1792,21 +1826,24 @@ html.modal-active, body.modal-active {
         margin: 0 auto; }
       section .left img {
         position: relative;
-        display: block; }
+        display: block;
+        margin: 0 auto; }
         section .left img#refresh1 {
           top: 10px;
-          margin-left: -10px; }
+          left: calc(50% - 10px);
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
         section .left img#refresh2 {
           top: 20px;
           left: inherit; }
       section .left video {
         height: 50%;
         position: absolute;
-        top: 25px;
+        top: calc(50% - 10px);
         z-index: -1;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-        transform: translateX(-50%); }
+        left: calc(50% - 30px);
+        -webkit-transform: translateY(-50%) translateX(-50%);
+        transform: translateY(-50%) translateX(-50%); }
     section .right {
       display: block;
       width: 100%; }
@@ -1816,6 +1853,15 @@ html.modal-active, body.modal-active {
         margin-top: 20px; }
     section#service .left {
       margin-bottom: 24px; }
+    section .container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      section .container .item {
+        width: 100%; }
+    section .service-title {
+      margin: 0 20px; }
   footer .footer-logo {
     width: auto;
     text-align: center;
@@ -1832,10 +1878,17 @@ html.modal-active, body.modal-active {
     display: none; }
   footer .footer-copy {
     display: none; }
+  footer .fa-2x {
+    font-size: 1.5em; }
+  .works-title {
+    margin: 0 10px 50px; }
   section#works {
+    display: none;
+    background-image: none;
     background-size: contain;
     background-repeat: no-repeat;
-    height: 300px; }
+    height: 250px;
+    margin: 0 0 30px; }
   .client-logo img {
     top: inherit !important;
     left: inherit !important;
@@ -1844,8 +1897,29 @@ html.modal-active, body.modal-active {
       width: 70px; }
   .client-works {
     margin: 0 15px 30px; }
+    .client-works h2:nth-of-type(1) {
+      margin-bottom: 15px; }
+    .client-works ul li img {
+      width: 100%;
+      max-width: 140px; }
   #modal-container .modal-background .modal {
     width: auto; }
+  .company {
+    margin: 0 10px; }
+    .company dl {
+      bottom: inherit; }
+    .company section {
+      height: 520px;
+      border-bottom: none; }
+      .company section#about .right {
+        width: 80%;
+        margin: auto; }
+    .company .ml140 {
+      margin-left: auto; }
+    .company .formTable {
+      margin: 0 auto; }
+    .company .company-info h2 {
+      font-size: 23px; }
   .contact {
     padding-bottom: 100px; }
   .contact__inner {
