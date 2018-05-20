@@ -12,7 +12,7 @@ $('#refresh1').on('click', function () {
       }
     }
     $(".start").remove();
-    $(this).rotate(-1440, {
+    $(this).rotate(1440, {
       duration: 18000,
       easing: 'linear',
       complete: function() {
