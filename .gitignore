@@ -91,3 +91,10 @@ Temporary Items
 
 .idea
 00_sozai
+
+wordpress/picture
+wordpress/wp-content/uploads
+wordpress/wp-content/plugins
+wordpress/_old
+
+01_buckup
