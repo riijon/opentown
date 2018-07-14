@@ -699,6 +699,8 @@ nav.works {
   .nav {
     position: absolute;
     top: 0;
+    left: 0;
+    z-index: 3;
   }
   .dtp {
     width: 116px;
@@ -724,6 +726,30 @@ nav.works {
     width: 120px;
     transform: translate(319px, 390px);
   }
+  .dtp-sp {
+    width: calc(165px / 2);
+    transform: translate(192px, 105px) rotate(-30deg);
+  }
+  .logo-sp {
+    width: calc(180px / 2);
+    transform: translate(210px, 160px) rotate(-10deg);
+  }
+  .movie-sp {
+    width: calc(180px / 2);
+    transform: translate(215px, 210px) rotate(-5deg);
+  }
+  .other-sp {
+    width: calc(213px / 2);
+    transform: translate(218px, 260px) rotate(0deg);
+  }
+  .photo-sp {
+    width: calc(198px / 2);
+    transform: translate(160px, 57px) rotate(-43deg);
+  }
+  .web-sp {
+    width: calc(167px / 2);
+    transform: translate(130px, 30px) rotate(-50deg);
+  }
 }
 
 .client-works {
@@ -741,6 +767,7 @@ nav.works {
       transition: all 0.3s;
       img {
         width: 100%;
+        height: auto;
         &:hover {
           opacity: 0.6;
         }
@@ -786,7 +813,7 @@ nav.works {
 .works-modal {
   display: none;
   img {
-    max-height: 300px;
+    max-height: 370px;
     max-width: 500px;
   }
 }
@@ -844,8 +871,8 @@ html.modal-active, body.modal-active {
     text-align: center;
     vertical-align: middle;
     .modal {
-      width: 500px;
-      height: 300px;
+      width: 600px;
+      height: 400px;
       background: white;
       padding: 50px;
       display: inline-block;
@@ -871,10 +898,28 @@ html.modal-active, body.modal-active {
         rect {
           stroke: #fff;
           stroke-width: 2px;
-          stroke-dasharray: 2000;
-          stroke-dashoffset: 2000;
+          stroke-dasharray: 2400;
+          stroke-dashoffset: 2400;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .select-cat {
+    margin-bottom: 50px;
+  }
+  nav.works {
+    h2 {
+      img {
+        width: 80px;
+        height: auto;
+      }
+    }
+    ul {
+      width: auto;
+      margin: 10px auto;
     }
   }
 }
@@ -1125,7 +1170,7 @@ html.modal-active, body.modal-active {
 
 @keyframes sketchIn {
   0% {
-    stroke-dashoffset: 2000;
+    stroke-dashoffset: 2400;
   }
 
   100% {
@@ -1139,7 +1184,7 @@ html.modal-active, body.modal-active {
   }
 
   100% {
-    stroke-dashoffset: 2000;
+    stroke-dashoffset: 2400;
   }
 }
 
@@ -1189,7 +1234,7 @@ html.modal-active, body.modal-active {
 
 @keyframes bondJamesBond {
   0% {
-    transform: translateX(1000px);
+    transform: translateX(1200px);
   }
 
   80% {
@@ -1230,7 +1275,7 @@ html.modal-active, body.modal-active {
   }
 
   100% {
-    box-shadow: inset 0 2000px 0 rgba(201, 24, 24, 0.8);
+    box-shadow: inset 0 2400px 0 rgba(201, 24, 24, 0.8);
   }
 }
 
@@ -1970,6 +2015,10 @@ html.modal-active, body.modal-active {
 
   .wrapper {
     overflow: hidden;
+
+    &.works-category {
+      margin-top: 80px;
+    }
   }
 
   .member {
@@ -2109,23 +2158,19 @@ html.modal-active, body.modal-active {
         margin-bottom: 15px;
       }
     }
-
-    ul {
-      li {
-        img {
-          width: 100%;
-          max-width: 140px;
-        }
-      }
-    }
   }
 
   #modal-container {
     .modal-background {
       .modal {
         width: auto;
+        height: auto;
+        padding: 10px;
       }
     }
+  }
+  .works-modal img {
+    width: auto;
   }
 
   //company
@@ -2233,8 +2278,4 @@ html.modal-active, body.modal-active {
     width: 100%;
   }
 
-}
-
-.test {
-  display: none;
 }

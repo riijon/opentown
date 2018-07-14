@@ -539,7 +539,9 @@ nav.works {
     width: 100%; }
   .select-cat .nav {
     position: absolute;
-    top: 0; }
+    top: 0;
+    left: 0;
+    z-index: 3; }
   .select-cat .dtp {
     width: 116px;
     -webkit-transform: translate(722px, 176px);
@@ -564,6 +566,30 @@ nav.works {
     width: 120px;
     -webkit-transform: translate(319px, 390px);
             transform: translate(319px, 390px); }
+  .select-cat .dtp-sp {
+    width: calc(165px / 2);
+    -webkit-transform: translate(192px, 105px) rotate(-30deg);
+            transform: translate(192px, 105px) rotate(-30deg); }
+  .select-cat .logo-sp {
+    width: calc(180px / 2);
+    -webkit-transform: translate(210px, 160px) rotate(-10deg);
+            transform: translate(210px, 160px) rotate(-10deg); }
+  .select-cat .movie-sp {
+    width: calc(180px / 2);
+    -webkit-transform: translate(215px, 210px) rotate(-5deg);
+            transform: translate(215px, 210px) rotate(-5deg); }
+  .select-cat .other-sp {
+    width: calc(213px / 2);
+    -webkit-transform: translate(218px, 260px) rotate(0deg);
+            transform: translate(218px, 260px) rotate(0deg); }
+  .select-cat .photo-sp {
+    width: calc(198px / 2);
+    -webkit-transform: translate(160px, 57px) rotate(-43deg);
+            transform: translate(160px, 57px) rotate(-43deg); }
+  .select-cat .web-sp {
+    width: calc(167px / 2);
+    -webkit-transform: translate(130px, 30px) rotate(-50deg);
+            transform: translate(130px, 30px) rotate(-50deg); }
 
 .client-works {
   padding-bottom: 120px;
@@ -577,7 +603,8 @@ nav.works {
       -webkit-transition: all 0.3s;
       transition: all 0.3s; }
       .client-works ul li img {
-        width: 100%; }
+        width: 100%;
+        height: auto; }
         .client-works ul li img:hover {
           opacity: 0.6; }
   .client-works .hidden_box {
@@ -614,7 +641,7 @@ nav.works {
 .works-modal {
   display: none; }
   .works-modal img {
-    max-height: 300px;
+    max-height: 370px;
     max-width: 500px; }
 
 html.modal-active, body.modal-active {
@@ -670,8 +697,8 @@ html.modal-active, body.modal-active {
     text-align: center;
     vertical-align: middle; }
     #modal-container .modal-background .modal {
-      width: 500px;
-      height: 300px;
+      width: 600px;
+      height: 400px;
       background: white;
       padding: 50px;
       display: inline-block;
@@ -695,8 +722,18 @@ html.modal-active, body.modal-active {
         #modal-container .modal-background .modal .modal-svg rect {
           stroke: #fff;
           stroke-width: 2px;
-          stroke-dasharray: 2000;
-          stroke-dashoffset: 2000; }
+          stroke-dasharray: 2400;
+          stroke-dashoffset: 2400; }
+
+@media screen and (max-width: 740px) {
+  .select-cat {
+    margin-bottom: 50px; }
+  nav.works h2 img {
+    width: 80px;
+    height: auto; }
+  nav.works ul {
+    width: auto;
+    margin: 10px auto; } }
 
 @-webkit-keyframes unfoldIn {
   0% {
@@ -1084,13 +1121,13 @@ html.modal-active, body.modal-active {
 
 @-webkit-keyframes sketchIn {
   0% {
-    stroke-dashoffset: 2000; }
+    stroke-dashoffset: 2400; }
   100% {
     stroke-dashoffset: 0; } }
 
 @keyframes sketchIn {
   0% {
-    stroke-dashoffset: 2000; }
+    stroke-dashoffset: 2400; }
   100% {
     stroke-dashoffset: 0; } }
 
@@ -1098,13 +1135,13 @@ html.modal-active, body.modal-active {
   0% {
     stroke-dashoffset: 0; }
   100% {
-    stroke-dashoffset: 2000; } }
+    stroke-dashoffset: 2400; } }
 
 @keyframes sketchOut {
   0% {
     stroke-dashoffset: 0; }
   100% {
-    stroke-dashoffset: 2000; } }
+    stroke-dashoffset: 2400; } }
 
 @-webkit-keyframes modalFadeIn {
   0% {
@@ -1162,8 +1199,8 @@ html.modal-active, body.modal-active {
 
 @-webkit-keyframes bondJamesBond {
   0% {
-    -webkit-transform: translateX(1000px);
-            transform: translateX(1000px); }
+    -webkit-transform: translateX(1200px);
+            transform: translateX(1200px); }
   80% {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
@@ -1181,8 +1218,8 @@ html.modal-active, body.modal-active {
 
 @keyframes bondJamesBond {
   0% {
-    -webkit-transform: translateX(1000px);
-            transform: translateX(1000px); }
+    -webkit-transform: translateX(1200px);
+            transform: translateX(1200px); }
   80% {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
@@ -1223,16 +1260,16 @@ html.modal-active, body.modal-active {
     -webkit-box-shadow: inset 0 0 0 rgba(201, 24, 24, 0.8);
             box-shadow: inset 0 0 0 rgba(201, 24, 24, 0.8); }
   100% {
-    -webkit-box-shadow: inset 0 2000px 0 rgba(201, 24, 24, 0.8);
-            box-shadow: inset 0 2000px 0 rgba(201, 24, 24, 0.8); } }
+    -webkit-box-shadow: inset 0 2400px 0 rgba(201, 24, 24, 0.8);
+            box-shadow: inset 0 2400px 0 rgba(201, 24, 24, 0.8); } }
 
 @keyframes fadeToRed {
   0% {
     -webkit-box-shadow: inset 0 0 0 rgba(201, 24, 24, 0.8);
             box-shadow: inset 0 0 0 rgba(201, 24, 24, 0.8); }
   100% {
-    -webkit-box-shadow: inset 0 2000px 0 rgba(201, 24, 24, 0.8);
-            box-shadow: inset 0 2000px 0 rgba(201, 24, 24, 0.8); } }
+    -webkit-box-shadow: inset 0 2400px 0 rgba(201, 24, 24, 0.8);
+            box-shadow: inset 0 2400px 0 rgba(201, 24, 24, 0.8); } }
 
 @-webkit-keyframes slowFade {
   0% {
@@ -1850,6 +1887,8 @@ html.modal-active, body.modal-active {
     color: #ffffff; }
   .wrapper {
     overflow: hidden; }
+    .wrapper.works-category {
+      margin-top: 80px; }
   .member img {
     width: 80%; }
   section {
@@ -1939,10 +1978,11 @@ html.modal-active, body.modal-active {
     margin: 0 15px 30px; }
     .client-works h2:nth-of-type(1) {
       margin-bottom: 15px; }
-    .client-works ul li img {
-      width: 100%;
-      max-width: 140px; }
   #modal-container .modal-background .modal {
+    width: auto;
+    height: auto;
+    padding: 10px; }
+  .works-modal img {
     width: auto; }
   .company {
     margin: 0 10px; }
@@ -2003,6 +2043,3 @@ html.modal-active, body.modal-active {
       margin-left: 0; }
   .contact__body-item-submit {
     width: 100%; } }
-
-.test {
-  display: none; }

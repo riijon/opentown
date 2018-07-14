@@ -6,6 +6,7 @@
  * Time: 17:08
  */
 
-require_once locate_template('lib/shortcode.php');        // 初期設定の関数
-require_once locate_template('lib/enqueue.php');        // 初期設定の関数
+require_once locate_template('lib/base.php');        // 基本
+require_once locate_template('lib/shortcode.php');        // ショートコード
+require_once locate_template('lib/enqueue.php');        // 外部読み込み管理
 

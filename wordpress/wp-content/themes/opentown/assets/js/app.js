@@ -51,6 +51,7 @@ $(function () {
   });
 });
 
+// masonry
 var masonry = new MiniMasonry({
   container: '.masonry',
   gutter: 20

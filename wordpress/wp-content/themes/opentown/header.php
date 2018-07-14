@@ -25,15 +25,15 @@
   <meta property="og:description" content="仙台の本町でデザイン、アパレル販売、撮影キャスティング、イベント運営などの業務を行なっております。">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="open town">
-  <meta property="og:image" content="http://opentown.jp/assets/img/ogimage.jpg">
-  <meta property="og:url" content="http://opentown.jp/">
+  <meta property="og:image" content="https://opentown.jp/wp-content/themes/opentown/assets/img/ogimage.jpg">
+  <meta property="og:url" content="https://opentown.jp/">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>open town</title>
 
-  <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?1">
+  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/assets/img/apple-touch-icon.png">
 
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
