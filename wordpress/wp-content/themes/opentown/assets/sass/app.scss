@@ -768,6 +768,7 @@ nav.works {
       img {
         width: 100%;
         height: auto;
+        display: block;
         &:hover {
           opacity: 0.6;
         }
@@ -2152,6 +2153,12 @@ html.modal-active, body.modal-active {
 
   .client-works {
     margin: 0 15px 30px;
+    ul {
+      li {
+        position: relative;
+        margin: 0 15px 30px;
+      }
+    }
 
     h2 {
       &:nth-of-type(1) {

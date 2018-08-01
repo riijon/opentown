@@ -604,7 +604,8 @@ nav.works {
       transition: all 0.3s; }
       .client-works ul li img {
         width: 100%;
-        height: auto; }
+        height: auto;
+        display: block; }
         .client-works ul li img:hover {
           opacity: 0.6; }
   .client-works .hidden_box {
@@ -1976,6 +1977,9 @@ html.modal-active, body.modal-active {
       width: 70px; }
   .client-works {
     margin: 0 15px 30px; }
+    .client-works ul li {
+      position: relative;
+      margin: 0 15px 30px; }
     .client-works h2:nth-of-type(1) {
       margin-bottom: 15px; }
   #modal-container .modal-background .modal {

@@ -26,7 +26,7 @@ gulp.task('browserSync', function () {
         proxy: 'localhost',
         files: [
             "wp-content/themes/opentown/assets/css/**/*.css",
-            "wp-content/themes/opentown/assets/js/min/**/*.js",
+            "wp-content/themes/opentown/assets/js/**/*.js",
             "./**/*.php"
         ]
     });

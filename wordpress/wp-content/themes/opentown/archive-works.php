@@ -27,13 +27,18 @@ endwhile;
 endif;
 wp_reset_query();
 $tag_list = array_unique($tag_list);
+if (is_mobile()) {
+  $posts_per_page = 30;
+} else {
+  $posts_per_page = -1;
+}
 
 $args = array(
   'post_type' => 'works',
   'post_status' => 'publish',
   'order' => 'DESC',
   'orderby' => 'date',
-  'posts_per_page' => -1,
+  'posts_per_page' => $posts_per_page,
   'category_name' => $works_category,
   'tag_slug__in' => $works_tag,
 );
@@ -63,7 +68,8 @@ $args = array(
                                      alt="web"></a>
       </div>
       <div class="sp">
-        <img class="bg-sp" src="<?php echo get_template_directory_uri() . '/assets/img/works/bg-works_sp.jpg'; ?>"
+        <img class="bg-sp"
+             src="<?php echo get_template_directory_uri() . '/assets/img/works/bg-works_sp.jpg'; ?>"
              alt="works">
         <a href="/works/?c=dtp"><img class="dtp-sp nav"
                                      src="<?php echo get_template_directory_uri() . '/assets/img/works/nav-dtp_sp.svg'; ?>"
@@ -116,17 +122,10 @@ $args = array(
             $r = (int)$width / 281;
             $height = round($image[2] / $r, 0);
             ?>
-            <li id="<?php echo $i; ?>" class="modal-button item" style="height: <?php
+            <li id="<?php echo $i; ?>" class="modal-button item" <?php
             if (!is_mobile()) {
-              echo "calc(100% - 20px)";
-            } else {
-              echo $height;
-            }
-            ?>px;" data-page="a">
-              <?php
-//              echo 'r:'.$r . ', height:'.$height;
-//              var_dump(get_field('img'));
-              ?>
+              echo 'style="height: ' . $height . 'px';
+            } ?>">
               <img
                   src="<?php echo $url; ?>"
                   alt="<?php the_title(); ?>">
@@ -144,7 +143,7 @@ $args = array(
             ?>
             <?php if (have_posts()): while (have_posts()): the_post(); ?>
               <?php
-              $image = wp_get_attachment_image_src(get_field('img'), 'full');
+              $image = wp_get_attachment_image_src(get_field('img'), 'medium');
               $description = get_field('description');
               $url = $image[0];
               ?>
@@ -163,8 +162,9 @@ $args = array(
           </div>
         </div>
       </div>
-      <div class="go-top"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/works/up_1.png"
-                                           alt=""></a></div>
+      <div class="go-top"><a href="#"><img
+              src="<?php echo get_template_directory_uri(); ?>/assets/img/works/up_1.png"
+              alt=""></a></div>
     <?php endif; ?>
   </div>
 
