@@ -18,6 +18,7 @@ function theme_name_scripts()
   }
 
   if (is_archive('works')) {
+    wp_enqueue_script( 'lazysizes-min-js', get_template_directory_uri() . '/assets/js/min/lazysizes.min.js', array(), '4.1.0', true );
     wp_enqueue_script( 'minimasonry-min-js', get_template_directory_uri() . '/assets/js/min/minimasonry.min.js', array('jquery-3'), '1.0.0', true );
     wp_enqueue_script( 'app-js', get_template_directory_uri() . '/assets/js/app.js', array('minimasonry-min-js'), '1.0.0', true );
   } else {

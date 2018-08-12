@@ -127,7 +127,8 @@ $args = array(
               echo 'style="height: ' . $height . 'px';
             } ?>">
               <img
-                  src="<?php echo $url; ?>"
+                  data-src="<?php echo $url; ?>"
+                  class="lazyload"
                   alt="<?php the_title(); ?>">
             </li>
             <?php $i++; ?>
@@ -143,12 +144,13 @@ $args = array(
             ?>
             <?php if (have_posts()): while (have_posts()): the_post(); ?>
               <?php
-              $image = wp_get_attachment_image_src(get_field('img'), 'medium');
+              $image = wp_get_attachment_image_src(get_field('img'), 'full');
               $description = get_field('description');
               $url = $image[0];
               ?>
               <div class="works-modal <?php echo $i; ?>">
-                <img src="<?php echo $url; ?>"
+                <img data-src="<?php echo $url; ?>"
+                     class="lazyload"
                      alt="<?php the_title(); ?>">
                 <p><?php echo $description; ?></p>
               </div>
